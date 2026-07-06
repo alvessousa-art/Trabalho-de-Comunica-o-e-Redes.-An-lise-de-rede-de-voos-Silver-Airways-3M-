@@ -10,7 +10,7 @@ from haversine import haversine
 import sys
 
 #Define o tamanho que o matplotlib irá usar para montar e mostrar o grafo
-plt.figure(figsize=(6, 6))
+plt.figure(figsize=(10, 10))
 plt.axis("off")
 
 GrafoDeAeroportosERotas = nx.DiGraph()
@@ -94,12 +94,12 @@ edge_labels = nx.get_edge_attributes(GrafoDeAeroportosERotas, "weight")
 if "airportName" in sys.argv:
     nx.draw_networkx_nodes(GrafoDeAeroportosERotas, pos=layout, node_size=400)
     nx.draw_networkx_edges(GrafoDeAeroportosERotas, pos=layout)
-    nx.draw_networkx_labels(GrafoDeAeroportosERotas, pos=layout, labels=etiquetas, font_size=8)
+    nx.draw_networkx_labels(GrafoDeAeroportosERotas, pos=layout, labels=etiquetas, font_size=6.5)
     nx.draw_networkx_edge_labels(GrafoDeAeroportosERotas, layout, edge_labels, font_size=5)
 else:
     nx.draw_networkx_nodes(GrafoDeAeroportosERotas, pos=layout, node_size=400)
     nx.draw_networkx_edges(GrafoDeAeroportosERotas, pos=layout)
-    nx.draw_networkx_labels(GrafoDeAeroportosERotas, pos=layout, font_size=8)
+    nx.draw_networkx_labels(GrafoDeAeroportosERotas, pos=layout, font_size=6.5)
     nx.draw_networkx_edge_labels(GrafoDeAeroportosERotas, layout, edge_labels, font_size=5)
 
 #Escolhe se vai salvar como jpg, visualizar ou ambos
