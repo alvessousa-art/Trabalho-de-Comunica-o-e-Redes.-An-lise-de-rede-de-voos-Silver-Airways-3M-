@@ -13,7 +13,7 @@ import sys
 plt.figure(figsize=(10, 10))
 plt.axis("off")
 
-GrafoDeAeroportosERotas = nx.DiGraph()
+GrafoDeAeroportosERotas = nx.Graph()
 
 #Dados na forma de um csv 
 #Dados das companhias aéreas
