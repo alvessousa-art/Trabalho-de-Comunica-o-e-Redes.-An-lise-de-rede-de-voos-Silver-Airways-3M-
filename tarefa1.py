@@ -10,7 +10,7 @@ from haversine import haversine
 import sys
 
 #Define o tamanho que o matplotlib irá usar para montar e mostrar o grafo
-plt.figure(figsize=(8, 8))
+plt.figure(figsize=(6, 6))
 plt.axis("off")
 
 GrafoDeAeroportosERotas = nx.DiGraph()
@@ -91,7 +91,7 @@ layout = nx.kamada_kawai_layout(GrafoDeAeroportosERotas, weight=10)
 edge_labels = nx.get_edge_attributes(GrafoDeAeroportosERotas, "weight")
 
 #Configurações de visualização
-if "airpotName" in sys.argv:
+if "airportName" in sys.argv:
     nx.draw_networkx_nodes(GrafoDeAeroportosERotas, pos=layout, node_size=400)
     nx.draw_networkx_edges(GrafoDeAeroportosERotas, pos=layout)
     nx.draw_networkx_labels(GrafoDeAeroportosERotas, pos=layout, labels=etiquetas, font_size=8)
