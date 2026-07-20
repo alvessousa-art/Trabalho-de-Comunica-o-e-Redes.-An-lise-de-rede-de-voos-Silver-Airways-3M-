@@ -36,9 +36,9 @@ else:
 
 #Escolhe se vai salvar como jpg, visualizar ou ambos
 if "save" in sys.argv: 
-    plt.savefig("visualizacao.jpg", dpi=500)
+    plt.savefig("images/visualizacao.jpg", dpi=500)
 elif "both" in sys.argv:
-    plt.savefig("visualizacao.jpg", dpi=500)
+    plt.savefig("images/visualizacao.jpg", dpi=500)
     plt.show()
 else:
     plt.show()
