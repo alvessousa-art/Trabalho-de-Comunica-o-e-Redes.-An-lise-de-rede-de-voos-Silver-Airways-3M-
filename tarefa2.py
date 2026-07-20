@@ -55,7 +55,7 @@ for j in range(2):
     tabela[(0, j)].set_text_props(weight='bold')
 plt.title("Métricas da Rede - Silver Airways (3M)", fontweight="bold", fontsize=14, y=0.95)
 
-plt.savefig("images/tabela.jpg", dpi=500)
+plt.savefig("images/metricasDaRede.jpg", dpi=500)
 plt.show()
 
 #Para testarmos a validade da análise, a célula abaixo roda o mesmo código para um grafo quadrado de 2x2 com vértices A, B, C e D. Portanto, todas as métricas devem ter valor 2:
@@ -110,5 +110,5 @@ for j in range(2):
     tabela[(0, j)].set_text_props(weight='bold')
 plt.title("Métricas da Rede - Prova Real com grafo quadrado", fontweight="bold", fontsize=14, y=0.95)
 
-plt.savefig("images/tabelaParaValidacao.jpg", dpi=500)
+plt.savefig("images/metricasDaRede2x2.jpg", dpi=500)
 plt.show()

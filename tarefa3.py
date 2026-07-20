@@ -13,6 +13,9 @@ def main():
         # extraio o grafo com as rotas e distâncias (pesos) já calculadas por haversine
         grafo = dados_projeto["GrafoDeAeroportosERotas"]
         
+        # extraio as etiquetas com o para código e IATA e nome do aeroporto para a visualização
+        etiquetas = dados_projeto["etiquetas"]
+        
     except Exception as e:
         print(f"Erro ao carregar o grafo: {e}")
         return
@@ -21,6 +24,9 @@ def main():
     print("Grafo carregado com sucesso!")
     print(f"Total de aeroportos (vértices): {grafo.number_of_nodes()}")
     print(f"Total de rotas disponíveis (arestas): {grafo.number_of_edges()}")
+    print("Aeroportos disponíveis junto de seu código IATA")
+    for IATA in etiquetas:
+        print(f"{IATA}: {etiquetas[IATA]}")
 
     # interação com o usuário para buscar o menor caminho
     print("BUSCA DE CAMINHO MÍNIMO - AEROPORTOS")
