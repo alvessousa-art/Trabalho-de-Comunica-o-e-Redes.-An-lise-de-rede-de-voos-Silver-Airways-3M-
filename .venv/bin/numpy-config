@@ -1,0 +1,6 @@
+#!/Users/gabrielabispo/Documents/UFABC/Trabalho-de-Comunica-o-e-Redes.-An-lise-de-rede-de-voos-Silver-Airways-3M-/.venv/bin/python3.12
+import sys
+from numpy._configtool import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
