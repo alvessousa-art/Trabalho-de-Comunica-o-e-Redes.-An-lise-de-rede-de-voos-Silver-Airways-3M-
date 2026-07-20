@@ -57,7 +57,7 @@ plt.title("Métricas da Rede - Silver Airways (3M)", fontweight="bold", fontsize
 
 plt.show()
 
-Para testarmos a validade da análise, a célula abaixo roda o mesmo código para um grafo quadrado de 2x2 com vértices A, B, C e D. Portanto, todas as métricas devem ter valor 2:
+#Para testarmos a validade da análise, a célula abaixo roda o mesmo código para um grafo quadrado de 2x2 com vértices A, B, C e D. Portanto, todas as métricas devem ter valor 2:
 
 import networkx as nx
 import matplotlib.pyplot as plt
