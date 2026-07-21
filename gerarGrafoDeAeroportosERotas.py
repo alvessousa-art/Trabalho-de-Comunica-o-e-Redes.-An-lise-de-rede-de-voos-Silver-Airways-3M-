@@ -15,24 +15,24 @@ def gerarGrafoDeAeroportosERotas():
     #Dados dos aeroportos
     aeroportos = pd.read_csv("airports.csv")
     
-    #Pego as iinformações da silver airlines
-    silverAirlines = companhiasAereas[companhiasAereas[companhiasAereas.columns[1]] == "Silver Airways (3M)"]
+    #Pego as iinformações da silver airways
+    silverAirways = companhiasAereas[companhiasAereas[companhiasAereas.columns[1]] == "Silver Airways (3M)"]
     #pego o código IATA dela
-    silverAirlinesIATA = silverAirlines.iloc[0, 3] 
+    silverAirwaysIATA = silverAirways.iloc[0, 3] 
     
-    #Linhas aéreas da silver airlines
-    rotasDaSilverAirlines = rotas[rotas[rotas.columns[0]] == silverAirlinesIATA]
+    #Linhas aéreas da silver airways
+    rotasDaSilverAirways = rotas[rotas[rotas.columns[0]] == silverAirwaysIATA]
     
     #Vertices e arestas são conjuntos na forma do python, ou seja, um objeto do stipo Set
     verticesDeAeroportos = set()
     arestasDeRotas = set()
     
     #Passo por todas as rotas e pego os aeroportos de origem e e destino, tornando-os em vértices.
-    for indice, rota in rotasDaSilverAirlines.iterrows():
+    for indice, rota in rotasDaSilverAirways.iterrows():
         #Código IATA do aeroporto de origem
-        aeroportoDeOrigem = rota[rotasDaSilverAirlines.columns[2]]
+        aeroportoDeOrigem = rota[rotasDaSilverAirways.columns[2]]
         #Código IATA do aeroporto de destino
-        aeroportoDeDestino = rota[rotasDaSilverAirlines.columns[4]]
+        aeroportoDeDestino = rota[rotasDaSilverAirways.columns[4]]
         
         #Adiciona os aeroportos de origem e destino no conjunto de vertides de aeroportos, como é um conjunto duplicatas são ignoradas
         verticesDeAeroportos.add(aeroportoDeOrigem)
