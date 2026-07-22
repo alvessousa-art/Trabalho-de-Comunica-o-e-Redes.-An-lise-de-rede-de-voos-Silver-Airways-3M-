@@ -1,14 +1,12 @@
-Tarefa 1</br>
-Para visualizar o grafo rode o arquivo tarefa1.py. Exemplo:
-> python tarefa1.py
 
-É possível usar outro parâmetros na forma:
-> python tarefa1.py "lista de parâmetros"
+Trabalho para a disciplina de comunicação e rdes da UFABC.
+O script tarefa1.py salva o visualizazao.jpg numa pasta images/, junto o script tarefa2.py também gera uma imagem da tabela e outra imagem adicional caso seja passado um parâmetro extra
 
-Parâmetros:
-- save - Salva o grafo ao ínves de abrir uma janela para visualizá-lo
-- both - Salva e abre a a janela
-- airportName - Gera o grafo com as etiquetas do vertices como o nome dos respectivos aeroportos ao ínves do código IATA.
+Na tarefa1.py é possível usar um parâmetro para renderizar o grafo os nomes dos aeroporto na forma:
+> python tarefa1.py airportName 
+
+No tarefa2.py é possível passar um parâemtro para gerar um tabela dum grafo para que seja confirmado e válidado uma anpalise do artigo ao comparar o grafo original com este modelo. Para salvar e mostar esta tabela use:
+> python tarefa2.py validar 
 
 Como usar a função gerarGrafoDeAeroportosERotas():
 importe ela:

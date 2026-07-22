@@ -36,10 +36,5 @@ else:
 
 #Escolhe se vai salvar como jpg, visualizar ou ambos
 plt.title("Grafo de aeroportos e rotas da Silver Airways (3M)")
-if "save" in sys.argv: 
-    plt.savefig("images/visualizacao.jpg", dpi=600)
-elif "both" in sys.argv:
-    plt.savefig("images/visualizacao.jpg", dpi=600)
-    plt.show()
-else:
-    plt.show()
+plt.savefig("images/visualizacao.jpg", dpi=600)
+plt.show()
