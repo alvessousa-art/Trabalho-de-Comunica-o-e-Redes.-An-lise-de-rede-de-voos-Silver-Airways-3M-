@@ -8,14 +8,14 @@ import sys
 from gerarGrafoDeAeroportosERotas import gerarGrafoDeAeroportosERotas 
 
 #Define o tamanho que o matplotlib irá usar para montar e mostrar o grafo
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(6, 6))
 plt.axis("off")
 
 dadosDoGrafoDeAeroportosERotas = gerarGrafoDeAeroportosERotas()
 GrafoDeAeroportosERotas = dadosDoGrafoDeAeroportosERotas["GrafoDeAeroportosERotas"]
 
 #Layout é uma variável que diz que como será desenhado o gráfico, existem várias formas de organizar um grafo, o networkx contém algumas delas já feitas, e uma delas é o spring_layout
-layout = nx.kamada_kawai_layout(GrafoDeAeroportosERotas, weight=10)
+layout = nx.kamada_kawai_layout(GrafoDeAeroportosERotas, weight=40)
 
 etiquetas = dadosDoGrafoDeAeroportosERotas["etiquetas"]
 
@@ -35,10 +35,11 @@ else:
     nx.draw_networkx_edge_labels(GrafoDeAeroportosERotas, layout, edge_labels, font_size=5)
 
 #Escolhe se vai salvar como jpg, visualizar ou ambos
+plt.title("Grafo de aeroportos e rotas da Silver Airways (3M)")
 if "save" in sys.argv: 
-    plt.savefig("images/visualizacao.jpg", dpi=500)
+    plt.savefig("images/visualizacao.jpg", dpi=600)
 elif "both" in sys.argv:
-    plt.savefig("images/visualizacao.jpg", dpi=500)
+    plt.savefig("images/visualizacao.jpg", dpi=600)
     plt.show()
 else:
     plt.show()

@@ -33,7 +33,6 @@ def gerarGrafoDeAeroportosERotas():
         aeroportoDeOrigem = rota[rotasDaSilverAirways.columns[2]]
         #Código IATA do aeroporto de destino
         aeroportoDeDestino = rota[rotasDaSilverAirways.columns[4]]
-        
         #Adiciona os aeroportos de origem e destino no conjunto de vertides de aeroportos, como é um conjunto duplicatas são ignoradas
         verticesDeAeroportos.add(aeroportoDeOrigem)
         verticesDeAeroportos.add(aeroportoDeDestino)
