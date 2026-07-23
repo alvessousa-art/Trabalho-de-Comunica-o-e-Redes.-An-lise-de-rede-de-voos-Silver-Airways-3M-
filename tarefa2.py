@@ -93,7 +93,7 @@ def getTabela (dados_tabela, titulo, figsize):
 #Matplotlib, tabela
 
 #Métricas gerais
-tabela_metricas = getTabela(dados_tabela, "Métricas da Rede - Prova Real com grafo quadrado", figsize=(6,4))
+tabela_metricas = getTabela(dados_tabela, "Métricas da Rede", figsize=(6,4))
 tabela_metricas.set_fontsize(8)
 tabela_metricas.scale(1, 3)
 
