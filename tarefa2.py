@@ -62,7 +62,7 @@ dados_tabela_centralidade_intermediacao = [["Vértice", "Centralidade"]] + centr
 #Centralidade de proximidade
 centralidade_proximidade = list(nx.closeness_centrality(grafo_silver).items())
 centralidade_proximidade.sort(key=byCentralidade, reverse=True)
-dados_tabela_centralidade_proximidade = [["Vértice", "Centralidade"]] + centralidade_intermediacao
+dados_tabela_centralidade_proximidade = [["Vértice", "Centralidade"]] + centralidade_proximidade
 
 #Pontes
 pontes = list(list(nx.bridges(grafo_silver)))
