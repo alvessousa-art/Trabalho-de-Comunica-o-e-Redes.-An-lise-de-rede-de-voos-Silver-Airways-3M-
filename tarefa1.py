@@ -33,6 +33,6 @@ else:
     nx.draw_networkx_edge_labels(GrafoDeAeroportosERotas, layout, edge_labels, font_size=7)
 
 #Escolhe se vai salvar como jpg, visualizar ou ambos
-plt.title("Grafo de aeroportos e rotas da Silver Airways (3M)")
+plt.title("Grafo de aeroportos e rotas da Silver Airways (3M)", fontweight="bold", fontsize=18, loc='center', y=1.0)
 plt.savefig("images/visualizacao.jpg", dpi=600)
 plt.show()

@@ -24,16 +24,18 @@ def main():
     print("Grafo carregado com sucesso!")
     print(f"Total de aeroportos (vértices): {grafo.number_of_nodes()}")
     print(f"Total de rotas disponíveis (arestas): {grafo.number_of_edges()}")
-    print("Aeroportos disponíveis junto de seu código IATA")
+    
+    print("[Aeroportos disponíveis junto de seu código IATA]")
+    print("=================================================")
     for IATA in etiquetas:
         print(f"{IATA}: {etiquetas[IATA]}")
-
+    print("=================================================")
     # interação com o usuário para buscar o menor caminho
     print("BUSCA DE CAMINHO MÍNIMO - AEROPORTOS")
     
     # pego as entradas do usuário, limpo os espaços e coloco em maiúsculo (padrão IATA)
-    origem_usuario = input("Digite o código IATA de origem: ").strip().upper()
-    destino_usuario = input("Digite o código IATA de destino: ").strip().upper()
+    origem_usuario = input("> Digite o código IATA de origem: ").strip().upper()
+    destino_usuario = input("> Digite o código IATA de destino: ").strip().upper()
 
     # tentativa de cálculo do caminho mínimo usando os pesos do grafo
     try:
