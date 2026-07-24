@@ -1,7 +1,11 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from gerarGrafoDeAeroportosERotas import gerarGrafoDeAeroportosERotas
-import sys
+
+from pathlib import Path
+
+output_dir = Path("images/")
+output_dir.mkdir(parents=True, exist_ok=True)
 
 dadosDoGrafo = gerarGrafoDeAeroportosERotas()
 grafo_silver = dadosDoGrafo["GrafoDeAeroportosERotas"]

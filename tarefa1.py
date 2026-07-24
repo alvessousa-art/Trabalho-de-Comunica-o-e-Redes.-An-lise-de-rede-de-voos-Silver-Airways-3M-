@@ -5,6 +5,11 @@ import matplotlib.pyplot as plt
 #Biblioteca padrão do python para fins de teste para gerar grafos diferentes de acordo com o argumento passado pela linha de comando no momento da chamada do script
 import sys
 
+from pathlib import Path
+
+output_dir = Path("images/")
+output_dir.mkdir(parents=True, exist_ok=True)
+
 from gerarGrafoDeAeroportosERotas import gerarGrafoDeAeroportosERotas 
 
 #Define o tamanho que o matplotlib irá usar para montar e mostrar o grafo
